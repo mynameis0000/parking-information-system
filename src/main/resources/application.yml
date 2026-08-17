@@ -1,0 +1,26 @@
+﻿spring:
+  application:
+    name: parking-trust
+
+  # PostgreSQL DB 연동
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/parking_db}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+
+  # JPA / Hibernate 설정
+  jpa:
+    hibernate:
+      ddl-auto: update # 개발 단계 초기 구축용
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+        default_schema: public
+
+# 외부 API 관련 설정
+public-data:
+  api:
+    base-url: https://api.data.go.kr/openapi/tn_pubr_prkplce_info_api
+    service-key: ${PUBLIC_DATA_SERVICE_KEY}
