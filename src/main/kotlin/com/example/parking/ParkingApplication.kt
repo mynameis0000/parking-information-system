@@ -1,4 +1,4 @@
-﻿package com.example.parking
+package com.example.parking
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan
